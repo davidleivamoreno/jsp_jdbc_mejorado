@@ -15,4 +15,13 @@
       <input type="submit" value="Aceptar">
     </form>
   </body>
+<%
+  String error =(String) session.getAttribute("error");
+  if(error!=null){
+    %>
+  <span style="color:red; background:yellow"><%= error %> </span>
+  <%
+  session.removeAttribute("error");
+  }
+%>
 </html>
